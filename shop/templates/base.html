@@ -1,0 +1,40 @@
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initital-scale=1, shrink-to-fit=no" />
+        <title>
+            {% block title %}
+            SHOP.CO
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        {% if not accountID %}
+            <div class="top-message">
+                <div class="top-message__label">
+                    Sign up and get 20% off to your first order. <a href="/">Sign Up Now</a>
+                </div>
+                <div class="top-message__cross"></div>
+            </div>
+        {% endif %}
+        <div class="nav__container">
+            <div class="nav__item nav__breaker shop-logo">SHOP.CO</div>
+            <div class="nav__links">
+                <div class="nav__item nav__item--link">Shop</div>
+                <div class="nav__item nav__item--link">On Sale</div>
+                <div class="nav__item nav__item--link">New Arrivals</div>
+                <div class="nav__item nav__breaker nav__item--link">Brands</div>
+            </div>
+            <div class="nav__search--full nav__breaker">
+                <div class="nav__icon icon--search"></div>
+                <div class="search__holder">Search for products...</div>
+            </div>
+            <div class="nav__icons">
+                <div class="nav__icon icon--cart"></div>
+                <div class="nav__icon icon--profile"></div>
+            </div>
+        </div>
+    </body>
+</html>

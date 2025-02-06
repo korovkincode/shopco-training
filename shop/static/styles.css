@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: IntegralCF;
+    src: url('integralcf_updated.woff');
+    ascent-override: 100%
+}
+@font-face {
+    font-family: Satoshi;
+    src: url('satoshi.otf');
+}
+.nav__container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+} 
+.nav__item {
+    /*background-color: yellow;*/
+    font-family: Satoshi;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.6px;
+}
+.nav__breaker {
+    margin-right: 40px;
+}
+.nav__links {
+    display: flexbox;
+}
+.nav__item--link {
+    display: inline-block;
+    margin-right: 24px;
+}
+.shop-logo {
+    font-weight: 700;
+    font-size: 32px;
+    font-family: IntegralCF;
+    height: 22px;
+}
+.nav__search--full {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 25px;
+    height: 48px;
+    width: 577px;
+    background: #F0F0F0;
+}
+.nav__icon {
+    height: 24px;
+    width: 24px;
+}
+.icon--search {
+    margin-left: 16px;
+    margin-right: 12px;
+    background-image: url('search_icon.svg');
+}
+.search__holder {
+    font-weight: 400;
+    font-family: Satoshi;
+    color: #00000066;
+}
+.nav__icons {
+    display: flex;
+    align-items: center;
+    width: 62px;
+    height: 24px;
+}
+.icon--cart {
+    margin-right: 14px;
+    background-image: url('cart_icon.svg');
+}
+.icon--profile {
+    background-image: url('profile_icon.svg');
+}
+.top-message {
+    background: black;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-message__label {
+    font-family: Satoshi;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    height: 19px;
+}
+.top-message__label a {
+    color: white;
+    text-decoration: underline white;
+}
+.top-message__label a:visited {
+    color: white;
+}
+.top-message__cross {
+    width: 20px;
+    height: 20px;
+    background-image: url('cross_icon.svg');
+    position: relative;
+    left: 417px;
+}
+@media (width >= 1240px){
+    .nav__container {
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top-message {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (width < 1240px) {
+    .nav__container {
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .top-message__cross {
+        display: none;
+    }
+    .nav__links {
+        display: none;
+    }
+    .nav__search--full {
+        display: none;
+    }
+}
