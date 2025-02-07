@@ -2,6 +2,14 @@
     margin: 0;
     padding: 0;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
 @font-face {
     font-family: IntegralCF;
     src: url('integralcf_updated.woff');
@@ -29,9 +37,6 @@
 .nav__breaker {
     margin-right: 40px;
 }
-.nav__links {
-    display: flexbox;
-}
 .nav__item--link {
     display: inline-block;
     margin-right: 24px;
@@ -58,12 +63,22 @@
 .icon--search {
     margin-left: 16px;
     margin-right: 12px;
-    background-image: url('search_icon.svg');
+    background-image: url('search_icon_gray.svg');
 }
 .search__holder {
+    background-color: #F0F0F0;
+    border: none;
     font-weight: 400;
     font-family: Satoshi;
-    color: #00000066;
+    font-size: 16px;
+}
+.search__holder::placeholder {
+    font-weight: 400;
+    font-family: Satoshi;
+    font-size: 16px;
+}
+.search__holder:focus {
+    outline: none;
 }
 .nav__icons {
     display: flex;
@@ -106,6 +121,38 @@
     position: relative;
     left: 417px;
 }
+.top-message__cross:hover {
+    cursor: pointer;
+}
+.icon--search {
+    margin-right: 12px;
+    background-image: url('search_icon_white.svg');
+}
+.nav__search--mini {
+    display: none;
+}
+.nav__links--mini {
+    display: none;
+    margin-right: 16px;
+}
+.icon--list {
+    background-image: url('list_icon.svg');
+}
+.links__dropdown {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 5;
+}
+.links__dropdown > li {
+    list-style-type: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 @media (width >= 1240px){
     .nav__container {
         max-width: 1240px;
@@ -120,17 +167,30 @@
 }
 @media (width < 1240px) {
     .nav__container {
-        justify-content: space-between;
+        justify-content: flex-start;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .nav__container div:nth-child(5) {
+        margin-left: auto;
     }
     .top-message__cross {
         display: none;
     }
-    .nav__links {
+    .nav__links--full {
         display: none;
     }
     .nav__search--full {
         display: none;
+    }
+    .nav__icons {
+        width: 120px;
+    }
+    .nav__search--mini {
+        display: block;
+        margin-right: 14px;
+    }
+    .nav__links--mini {
+        display: block;
     }
 }

@@ -12,29 +12,54 @@
     </head>
     <body>
         {% if not accountID %}
-            <div class="top-message">
+            <div class="top-message" id="top-message">
                 <div class="top-message__label">
                     Sign up and get 20% off to your first order. <a href="/">Sign Up Now</a>
                 </div>
-                <div class="top-message__cross"></div>
+                <div class="top-message__cross" id="top-message-close"></div>
             </div>
         {% endif %}
         <div class="nav__container">
-            <div class="nav__item nav__breaker shop-logo">SHOP.CO</div>
-            <div class="nav__links">
-                <div class="nav__item nav__item--link">Shop</div>
-                <div class="nav__item nav__item--link">On Sale</div>
-                <div class="nav__item nav__item--link">New Arrivals</div>
-                <div class="nav__item nav__breaker nav__item--link">Brands</div>
+            <div class="nav__links--mini" id="dropdown-opener">
+                <div class="nav__icon icon--list"></div>
+                <ul class="links__dropdown" id="dropdown-links">
+                    <li class="nav__item"><a href="/shop">Shop</a></li>
+                    <li class="nav__item"><a href="/on-sale">On Sale</a></li>
+                    <li class="nav__item"><a href="/new-arrivals">New Arrivals</a></li>
+                    <li class="nav__item"><a href="/brands">Brands</a></li>
+                </ul>
+            </div>
+            <div class="nav__item nav__breaker shop-logo">
+                <a href="/">SHOP.CO</a>
+            </div>
+            <div class="nav__links--full">
+                <div class="nav__item nav__item--link">
+                    <a href="/shop">Shop</a>
+                </div>
+                <div class="nav__item nav__item--link">
+                    <a href="/on-sale">On Sale</a>
+                </div>
+                <div class="nav__item nav__item--link">
+                    <a href="/new-arrivals">New Arrivals</a>
+                </div>
+                <div class="nav__item nav__breaker nav__item--link">
+                    <a href="/brands">Brands</a>
+                </div>
             </div>
             <div class="nav__search--full nav__breaker">
                 <div class="nav__icon icon--search"></div>
-                <div class="search__holder">Search for products...</div>
+                <input class="search__holder" id="search-bar" placeholder="Search for products..."></input>
             </div>
             <div class="nav__icons">
-                <div class="nav__icon icon--cart"></div>
-                <div class="nav__icon icon--profile"></div>
+                <div class="nav__icon icon--search nav__search--mini"></div>
+                <a href="/cart">
+                    <div class="nav__icon icon--cart"></div>
+                </a>
+                <a href="/profile">
+                    <div class="nav__icon icon--profile"></div>
+                </a>
             </div>
         </div>
     </body>
+    <script src="{% static 'eventHandlers.js' %}"></script>
 </html>
