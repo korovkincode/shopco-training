@@ -8,6 +8,7 @@
             SHOP.CO
             {% endblock %}
         </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
@@ -23,10 +24,18 @@
             <div class="nav__links--mini" id="dropdown-opener">
                 <div class="nav__icon icon--list"></div>
                 <ul class="links__dropdown" id="dropdown-links">
-                    <li class="nav__item"><a href="/shop">Shop</a></li>
-                    <li class="nav__item"><a href="/on-sale">On Sale</a></li>
-                    <li class="nav__item"><a href="/new-arrivals">New Arrivals</a></li>
-                    <li class="nav__item"><a href="/brands">Brands</a></li>
+                    <li class="nav__item">
+                        <a href="/shop">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/on-sale">On Sale</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/brands">Brands</a>
+                    </li>
                 </ul>
             </div>
             <div class="nav__item nav__breaker shop-logo">
@@ -48,7 +57,7 @@
             </div>
             <div class="nav__search--full nav__breaker">
                 <div class="nav__icon icon--search"></div>
-                <input class="search__holder" id="search-bar" placeholder="Search for products..."></input>
+                <input id="search-bar" placeholder="Search for products..."></input>
             </div>
             <div class="nav__icons">
                 <div class="nav__icon icon--search nav__search--mini"></div>
@@ -60,6 +69,23 @@
                 </a>
             </div>
         </div>
+        <div class="form__container">
+            <div class="form__content">
+                <div class="form__label">
+                    STAY UP TO DATE ABOUT OUR LATEST OFFERS
+                </div>
+                <div class="form__handlers">
+                    <div class="form__email">
+                        <div class="nav__icon icon--email"></div>
+                        <input id="email-bar" placeholder="Enter your email address"></input>
+                    </div>
+                    <div class="form__subscribe">Subscribe to Newsletter</div>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="{% static 'eventHandlers.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
