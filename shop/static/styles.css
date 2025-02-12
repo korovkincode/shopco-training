@@ -279,12 +279,9 @@ input:focus {
 .footer__content .shop-logo {
     line-height: 21.6px;
 }
-.copyright__container {
-    background: #F0F0F0;
-}
 .copyright__content {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    background: inherit;
+    height: 132px;
 }
 .copyright__info {
     font-family: Satoshi;
@@ -293,7 +290,6 @@ input:focus {
     line-height: 18.9px;
     letter-spacing: 0%;
     color: #00000099;
-    margin-bottom: 85px;
 }
 .divider {
     margin-bottom: 25px;
@@ -370,17 +366,17 @@ input:focus {
     }
 }
 @media (width < 1000px) {
-    .footer__content {
+    .footer__container {
         transform: translateY(-10%);;
     }
 }
 @media (width < 800px) {
-    .footer__content {
+    .footer__container {
         transform: translateY(-20%);;
     }
 }
 @media (width < 500px) {
-    .footer__content {
+    .footer__container {
         transform: translateY(-25%);;
     }
 }
