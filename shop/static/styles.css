@@ -155,12 +155,14 @@ input:focus {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.form__bg {
+    background: linear-gradient(to bottom, white 50%, #F0F0F0 50%);
+}
 .form__container {
     margin-left: auto;
     margin-right: auto;
     background: black;
     border-radius: 20px;
-    transform: translateY(-50%);
 }
 .form__content {
     display: flex;
@@ -212,10 +214,10 @@ input:focus {
     cursor: pointer;
 }
 .footer__container {
-    margin-top: 300px;
     background: #F0F0F0;
 }
 .footer__content {
+    padding-top: 50px;
     max-width: 1240px;
 }
 .shop-desc {
@@ -294,7 +296,7 @@ input:focus {
 .divider {
     margin-bottom: 25px;
     border: 1px solid #0000001A;
-    width: 100%;
+    min-width: 100%;
 }
 @media (width >= 1240px){
     .nav__container, .form__container, .copyright__content {
@@ -302,7 +304,7 @@ input:focus {
         margin-left: auto;
         margin-right: auto;
     }
-    .top-message, .footer__container, .copyright__container {
+    .top-message, .form__bg, .footer__container, .copyright__container {
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
@@ -354,6 +356,9 @@ input:focus {
     .form__email, .form__subscribe {
         width: 311px;
     }
+    .footer__content {
+        padding-top: 32px;
+    }
 }
 @media (width < 992px) {
     .footer__category {
@@ -364,19 +369,11 @@ input:focus {
         margin-top: 30px;
         margin-bottom: 25px;
     }
-}
-@media (width < 1000px) {
-    .footer__container {
-        transform: translateY(-10%);;
+    .copyright__content {
+        display: flex;
+        flex-direction: column;
     }
-}
-@media (width < 800px) {
-    .footer__container {
-        transform: translateY(-20%);;
-    }
-}
-@media (width < 500px) {
-    .footer__container {
-        transform: translateY(-25%);;
+    .copyright__info {
+        align-self: center;
     }
 }
